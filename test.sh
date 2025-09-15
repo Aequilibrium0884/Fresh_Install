@@ -1,13 +1,6 @@
 #!/bin/bash
-
-set -euo pipefail
-
-Zone="$(curl -s https://ipapi.co/timezone | tr -d '\r')"
-sys_zone="$(timedatectl show --property=Timezone --value)"
-
-if [ "$sys_zone" != "$Zone" ]; then
-  echo "Timezone is incorrect"
-  echo "Your timezone is: $Zone"
-else
-  echo "Your System Is Set to the correct Timezone"
-fi
+for i in {0..255}; do
+  printf "\033[38;5;%sm%4s" $i $i
+  (( (i+1) % 16 == 0 )) && echo
+done
+echo -e "\033[0m"

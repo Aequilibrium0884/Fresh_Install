@@ -8,3 +8,8 @@ alias c="clear"
 alias cp="sudo cp -r"
 alias setfacl="sudo setfacl -R"
 alias nvim="sudo nvim"
+
+
+alias -g G="grep"
+alias -g GR="grep -iR"
+alias -g GV="grep -iv"

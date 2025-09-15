@@ -1,0 +1,6 @@
+source ~/.config/zsh/export
+source ~/.config/zsh/options
+source ~/.config/zsh/miscellaneous
+source ~/.config/zsh/alias
+source ~/.config/zsh/zinit/Zinit_Config
+source ~/.config/zsh/powerlevel10k
