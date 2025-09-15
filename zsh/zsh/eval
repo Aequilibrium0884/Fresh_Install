@@ -1,0 +1,3 @@
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+eval "$(ssh-agent -a $HOME/.ssh/agent.sock)"

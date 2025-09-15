@@ -1,0 +1,3 @@
+source ~/.config/zsh/alias
+source ~/.config/zsh/miscellaneous
+source ~/.config/zsh/export
