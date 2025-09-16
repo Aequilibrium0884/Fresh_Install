@@ -12,4 +12,3 @@ if [ "$sys_zone" != "$Zone" ]; then
 else
   echo "Your System Is Set to the correct Timezone"
 fi
-

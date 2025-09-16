@@ -1,0 +1,11 @@
+## name of os if linux
+## source /etc/os-release
+## if name is redhat look for version (bugzilla)
+swvers for macos look for a way to remove blank spaces
+use if statement
+look for stuff for ubuntu
+use if statements to sort which repos need downloading
+make centos and rockylinux use the same variables for the same version redhat distro as theme
+make a seperate one for fedora because fedora is miles ahead and can be used in the same sense of arch
+workout which binaries are needed to install yay
+find which files are installed on my computers that i explicitly downloaded to know which ones i need
