@@ -1,0 +1,52 @@
+#!/bin/bash
+
+## basically test1 that test if a function works before a command or function
+## basically test2 that test if a function works after a command or function
+
+script_name() {
+  echo -e "##########$(basename "$0")##########\n\n" >>./.log
+}
+
+log_start() {
+  script_name
+  echo -e "########## START ##########\n" >>./.log
+  date >>./.log
+}
+
+log_stop() {
+  script_name
+  echo -e "########## STOP ##########\n" >>./.log
+  date >>./.log
+}
+
+checkdir() {
+  if [[ ! -d "$1" ]]; then
+    echo "File isn't present" >>./.log
+    return 1
+  else
+    return 0
+  fi
+}
+
+chngownrshp() {
+  sudo chown -R "$1"/..
+}
+
+createdir() {
+  if ! checkdir "$1"; then
+    mkdir -p "$1"
+    echo "directory created"
+    return 0
+  else
+    return 1
+  fi
+}
+
+sudo_createdir() {
+  if ! createdir "$1"; then
+    sudo mkdir -p "$1"
+    echo "directory forcefully made"
+  else
+    return 0
+  fi
+}
